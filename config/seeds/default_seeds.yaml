@@ -1,0 +1,3 @@
+# @package _global_
+
+pytorch_seed: 12345

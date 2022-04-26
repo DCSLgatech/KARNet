@@ -1,0 +1,65 @@
+path_dataset: ""
+
+deterministic: False
+
+epochs: 20
+lr: 1.e-06
+reg: 1.e-04
+lr_scheduler: 
+cameras: 
+  - "camera"
+  - "camera_b"
+  - "camera_l"
+  - "camera_r"
+
+device: "cuda"
+distributed: False
+
+batch_size: 32
+num_workers: 16
+
+no_seq: 4
+delta: 4
+
+lstm_n_layers: 1
+lstm_input_size: 129
+lstm_hidden_size: 129
+image_latent_size: 128 # Plain latent RNN only uses this parameter
+dropout: 0
+
+autoencoder: ""
+#autoencoder_config: "config.layers_config"
+autoencoder_resume: "results/1632282330/1632282330_model_epoch_49.pth"
+#autoencoder_freeze: False
+
+#resume: "results/1631866721/1631866721_model_epoch_10.pth"
+
+grayscale: True
+
+#test: False
+loss_patience: 100
+
+sensor_size: 1
+sensor_fields:
+  - "speed"
+note: "First all test 128 autoencoder"
+
+last_image: False
+
+random_seed: 43
+
+# Temporary (?)
+train_split: 0.7
+validation_split: 0.15
+
+log_header: 
+  - "epoch"
+  - "lr"
+  - "loss_train"
+  - "loss_train_image" 
+  - "loss_train_latent"
+  - "loss_val" 
+  - "loss_val_image" 
+  - "loss_val_latent"
+  - "loss_train_sen"
+  - "loss_val_sen"

@@ -1,0 +1,57 @@
+path_train: ""
+path_validation: ""
+path_test: ""
+
+deterministic: False
+epochs: 250
+
+patience_lr: 8
+patience_es: 20
+lr_alpha: 0.5
+
+cameras: 
+  - "center_camera_256_g"
+#  - "camera_b"
+#  - "camera_l"
+#  - "camera_r"
+
+device: "cuda"
+batch_size: 64
+num_workers: 4
+lr: 1.e-03
+reg: 1.e-06
+
+no_seq: 4
+delta: 4
+
+lstm_n_layers: 1
+lstm_input_size: 256
+lstm_hidden_size: 256
+image_latent_size: 256
+dropout: 0
+
+backbone_resume: ""   # Backbone state dict
+
+grayscale: True
+
+test: False
+
+action_size: 9
+sensor_size: 4
+sensor_fields:
+  - "throttle_quantized"
+  - "steering_normalized"
+  - "brake_quantized"
+#  - "trafficlight"
+
+note: "None"
+
+random_seed: 43
+
+log_header: 
+  - "epoch"
+  - "lr"
+  - "loss_train"
+  - "loss_val"
+  - "acc_train"
+  - "acc_val"

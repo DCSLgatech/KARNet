@@ -1,0 +1,72 @@
+
+note: ""
+
+path_train: ""
+path_validation: ""
+path_test: ""
+
+device: "cuda"
+distributed: False
+
+deterministic: False
+rnn_arch: "gru"
+hidden_latent: True
+
+patience_lr: 5
+patience_es: 12
+lr_alpha: 0.5
+
+epochs: 250
+lr: 1.e-04
+reg: 1.e-04
+
+cameras: 
+  - "camera_gray"
+#  - "camera_b_gray"
+#  - "camera_l_gray"
+#  - "camera_r_gray"
+
+batch_size: 32
+num_workers: 4
+shuffle: False
+
+no_seq: 4
+delta: 4
+
+lstm_n_layers: 1
+image_latent_size: 128 # Plain latent RNN only uses this parameter
+
+dropout: 0
+h_0_latent: True
+
+logs: null
+
+autoencoder: "simple"
+autoencoder_resume: "" # State dictionary of a pre-trained autoencoder
+
+
+grayscale: True
+
+last_image: False
+
+random_seed: 43
+
+action_size: 9
+
+sensor_fields:
+  - "throttle"  # 1.0 / 0.0
+  - "steer"     # 1.0 / -1.0
+  - "brake"     # 1.0 / 0.0
+  - "speed"     # 22.803525158245826 / 0.0
+
+log_header: 
+  - "epoch"
+  - "lr"
+  - "loss_train"
+  - "loss_train_image" 
+  - "loss_train_latent"
+  - "loss_val" 
+  - "loss_val_image" 
+  - "loss_val_latent"
+  - "loss_train_sen"
+  - "loss_val_sen"

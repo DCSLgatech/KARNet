@@ -1,0 +1,68 @@
+# file: clean.mplstyle
+# author: Nicolas Guarin-Zapata
+# description: style sheet for Matplotlib figures.
+#
+# Color palette from:
+# http://colorbrewer2.org/#type=qualitative&scheme=Set1&n=8
+
+# Setup figure size
+figure.figsize : 6.472, 4
+
+# Font setting
+# font.family : Arial
+# font.size: 12
+font.family : serif
+font.serif : ['Times']
+text.usetex : True
+
+# Setup axis
+axes.axisbelow :  True
+axes.labelweight : bold
+axes.titleweight : bold
+axes.facecolor : white
+# axes.prop_cycle : cycler('color',['e41a1c', '377eb8', '4daf4a', '984ea3', 'ff7f00', 'ffff33', 'a65628', 'f781bf'])
+# axes.prop_cycle : cycler('color',['990000', 'ad841f', '6da04b', '006570', '2f9fd0', '002f56', 'e4e4e4', '666666'])
+axes.prop_cycle : cycler('color',['4E79A7','F28E2C','E15759','76B7B2','59A14F','EDC949','AF7AA1','FF9DA7','9C755F','BAB0AB'])
+
+
+axes.linewidth : 1.25
+axes.grid : False
+axes.spines.left   : True   ## display axis spines
+axes.spines.bottom : True
+axes.spines.top    : False
+axes.spines.right  : False
+axes.xmargin   : 0.01
+axes.ymargin   : 0.01
+axes.autolimit_mode : round_numbers
+
+# Set x axis
+xtick.direction : out
+xtick.major.size : 4
+xtick.major.width : 1.25
+xtick.major.pad : 8
+
+# Set y axis
+ytick.direction : out
+ytick.major.size : 4
+ytick.major.width : 1.25
+ytick.major.pad : 8
+
+# Setup line width and grid
+lines.linewidth : 1.75
+grid.color : BABABA
+grid.linestyle : -
+grid.linewidth : 0.5
+
+# Setup legend
+legend.fancybox : True
+legend.frameon : True
+legend.loc : best
+
+# Always save using 'tight' layout
+pdf.fonttype : 42
+savefig.bbox : tight
+savefig.pad_inches : 0.01
+savefig.dpi : 300
+savefig.format : pdf
+
+

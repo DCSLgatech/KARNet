@@ -1,0 +1,36 @@
+note: ""
+
+path_train: ""
+path_validation: ""
+path_test: ""
+
+batch_size: 64
+num_workers: 4
+lr: 1.e-04
+reg: 1.e-04
+
+deterministic: False
+epochs: 200
+
+shuffle: True
+
+patience_lr: 10
+patience_es: 20
+lr_alpha: 0.5
+
+
+autoencoder: "simple" # "simple" "attention_latent" "attention_conv"
+
+cameras: 
+  - "center_camera_256_g"
+  - "left_camera_256_g"
+  - "right_camera_256_g"
+
+grayscale: True
+
+device: "cuda"
+distributed: False
+
+image_latent_size: 256
+
+random_seed: 43
